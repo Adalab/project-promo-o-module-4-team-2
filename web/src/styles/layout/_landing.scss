@@ -1,0 +1,100 @@
+.headerLanding {
+    height: 83vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    @media (min-width: 768px){
+        height: 89.7vh;
+    }
+}
+
+    .image {
+        width: 250px;
+        margin: 95px 35px 35.4px 35px;
+        @media (min-width: 768px){
+            width: 419px;
+            margin-top: 100px;
+        }
+    }
+
+    .landingTitle {
+        font-size: 19.2px;
+        font-family: "Merriweather", serif;
+        color: $dullOrange;
+        margin-left: 47.7px;
+        margin-right: 49.3px;
+        @media (min-width: 768px){
+            font-size: 24px;
+        }
+    }
+    .landingSubtitle {
+        font-size: 12.8px;
+        font-family: "Open Sans", sans-serif;
+        margin: 0 28px 17.8px 27.2px;
+        color: $deepGreen;
+        text-align: center;
+        @media (min-width: 768px){
+            font-size: 16px;
+            margin: 0 218px 27px 218px;
+        }
+    }
+
+    .rectangleElement {
+        width: 268px;
+        height: 73.8px;
+        border-radius: 4px;
+        border: solid 1.6px #e1733450;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        @media (min-width: 768px){
+            width: 325px;
+            height: 86px;
+            margin-bottom: 40px;
+        }
+    
+        & .itemList {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 12.8px;
+            font-family: "Open Sans", sans-serif;
+            @media (min-width: 768px){
+                font-size: 16px;
+            }
+        
+            & .fa-object-ungroup, .fa-keyboard, .fa-share-alt{
+                font-size: 22.4px;
+                color: $dullOrange;
+                @media (min-width: 768px){
+                    font-size: 28px;;
+                }
+            }
+        }
+    }
+
+    .buttonStartDesign {
+        text-transform: uppercase;
+        font-family: "Open Sans", sans-serif;
+        font-weight: normal;
+        font-size: 16px;
+        padding: 10px 20px;
+        background-color: $dirtyBlue;
+        text-decoration: none;
+        color: white;
+        border-radius: 50px;
+        margin-top: 38.6px;
+        margin-bottom: 30px;
+        @media (min-width: 768px){
+            margin-top: 40px;
+            margin-bottom: 70px;            
+        }
+    
+        & .buttonColor {
+            color: white;
+        }
+    }

@@ -1,0 +1,9 @@
+.header__card {
+  height: 111px;
+  display: flex;
+  align-items: center;
+  &--logo {
+    height: 50px;
+    margin: 30px 40px;
+  }
+}

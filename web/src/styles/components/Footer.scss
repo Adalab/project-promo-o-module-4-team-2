@@ -1,0 +1,29 @@
+@import '../core/Variables.scss';
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid $pearlGrey;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.footerCopy {
+  font-family: 'Open Sans', sans-serif;
+  color: #6b6b6b;
+  margin: 18px 61px 12px 61px;
+  opacity: 0.5;
+  @media (min-width: 768px) {
+    margin: 18px 0 18px 41px;
+  }
+}
+.imageLogoAdalab {
+  width: 103px;
+  margin-bottom: 20px;
+  @media (min-width: 768px) {
+    margin: 5px 40px 5px;
+  }
+}

@@ -1,0 +1,117 @@
+.fieldset__design {
+  margin: 27px 20px 0px; // Arriba | Horizontal | Abajo
+  border-style: none;
+  border-bottom: 1px solid $pearlGrey;
+  @media all and(min-width:768px) {
+    margin: 27px 30px 0px 40px;
+  }
+  @media all and(min-width:1024px) {
+  }
+}
+.hidden {
+  display: none;
+}
+
+.container__design {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 25px;
+
+  &--icon {
+    display: flex;
+    flex-direction: row;
+  }
+  &--title {
+    flex-grow: 1;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: $opensansFont;
+    font-weight: 600;
+    margin-left: 10px;
+    color: $metalColor;
+  }
+  &--iconArrow {
+    width: 16px;
+    height: 18px;
+    font-size: 18px;
+    color: $metalColor;
+    transform: rotate(180deg);
+    &--up {
+      transform: rotate(0deg);
+    }
+    &--down {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.fa-object-ungroup {
+  font-size: 22.4px;
+  color: $dullOrange;
+}
+
+.select {
+  width: 100%;
+  max-height: 340px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  &__title {
+    font-family: $opensansFont;
+    font-size: 14px;
+    font-weight: 100;
+    color: $metalColor;
+    text-transform: uppercase;
+    margin-left: 19px;
+  }
+  &__options {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    &--input {
+      width: 17px;
+      height: 17px;
+      margin-right: 10px;
+    }
+    &--palette {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.palette {
+  // display: inline-block;
+  width: 30px;
+  height: 25px;
+  &__cold1 {
+    background-color: $deepGreen;
+  }
+  &__cold2 {
+    background-color: $dirtyBlue;
+  }
+  &__cold3 {
+    background-color: $hospitalGreen;
+  }
+  &__hot1 {
+    background-color: $deepRed;
+  }
+  &__hot2 {
+    background-color: $rustyRed;
+  }
+  &__hot3 {
+    background-color: $tomatoRed;
+  }
+  &__mix1 {
+    background-color: $blackboard;
+  }
+  &__mix2 {
+    background-color: $eggYellow;
+  }
+  &__mix3 {
+    background-color: $lightGreyBlue;
+  }
+}

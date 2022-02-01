@@ -1,0 +1,9 @@
+.card__main {
+  @include tablet {
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #f5f5f5, white);
+    display: flex;
+    column-gap: 30px;
+    padding: 20px 40px;
+  }
+}

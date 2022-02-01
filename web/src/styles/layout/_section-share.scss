@@ -1,0 +1,149 @@
+.fieldset__share {
+  // background-color: #fff;
+  margin: 10px 20px 0px;
+  border: 0;
+  border-bottom: 1px solid $pearlGrey;
+  @media all and(min-width:768px) {
+    margin: 10px 30px 0px 40px;
+  }
+}
+
+.container__share {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  &--icon {
+    display: flex;
+    flex-direction: row;
+  }
+  &--title {
+    flex-grow: 1;
+    font-size: 18px;
+    padding-left: 10px;
+    text-transform: uppercase;
+    font-family: $opensansFont;
+    font-weight: 600;
+    color: $metalColor;
+  }
+  &--iconArrow {
+    width: 16px;
+    height: 18px;
+    font-size: 18px;
+    color: $metalColor;
+    &--up {
+      transform: rotate(0deg);
+    }
+    &--down {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.fa-share-alt {
+  font-size: 22.4px;
+  color: $dullOrange;
+}
+
+.container__button {
+  display: flex;
+  justify-content: center;
+
+  &__btn {
+    &--grey {
+      width: 199px;
+      height: 50px;
+      font-family: $opensansFont;
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #fff;
+      margin: 0px auto 30px auto;
+      padding: 13px 18px 13px 17px;
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+      background-color: gray;
+    }
+    &--orange {
+      width: 199px;
+      height: 50px;
+      font-family: $opensansFont;
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #fff;
+      margin: 0px auto 30px auto;
+      padding: 13px 18px 13px 17px;
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+      background-color: $dullOrange;
+    }
+  }
+
+  &--icon {
+    margin-right: 9px;
+  }
+}
+
+.container__created {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &--title {
+    margin-top: 20px;
+    font-size: 18px;
+    color: $metalColor;
+    font-family: $opensansFont;
+    font-weight: 600;
+  }
+  &--link {
+    margin: 5px auto 13px auto;
+    color: $dullOrange;
+    text-align: center;
+  }
+  &--hidden {
+    display: none;
+  }
+}
+.btn--twitter {
+  font-family: $opensansFont;
+  font-weight: 500;
+  background-color: #00a0f5;
+  border-style: none;
+  font-size: 14px;
+  line-height: 30px;
+  width: 181px;
+  border-radius: 3px;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.32);
+}
+.twitter-icon {
+  size: 18px;
+  vertical-align: middle;
+  padding-right: 9.5px;
+  padding-left: 9.5px;
+}
+
+.container__design:hover .container__design--iconArrow,
+.container__design:hover .container__design--title {
+  color: $dullOrange;
+  transition: color ease 0.2s;
+}
+
+.container__fill:hover .container__fill--iconArrow,
+.container__fill:hover .container__fill--title {
+  color: $dullOrange;
+  transition: color ease 0.2s;
+}
+
+.container__share:hover .container__share--iconArrow,
+.container__share:hover .container__share--title {
+  color: $dullOrange;
+  transition: color ease 0.2s;
+}

@@ -1,0 +1,162 @@
+.card-preview {
+  background-image: linear-gradient(to bottom, #bfcdd0, #dde9ed);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  @include tablet {
+    justify-content: center;
+    order: 1;
+    width: 50%;
+    border-radius: 6px;
+  }
+  @include desktop {
+    width: 60%;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 45px;
+  margin-right: 35px;
+  @include tablet {
+    margin: 0 30px 40px 30px;
+  }
+}
+
+.reset {
+  grid-column: 2/3;
+  background-color: rgba(0, 0, 0, 0);
+  width: 75px;
+  height: 30px;
+  border: solid 1px white;
+  border-radius: 15px;
+  font-size: 12px;
+  font-family: $opensansFont;
+  color: $metalColor;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  &__icon {
+    padding-right: 4px;
+    font-size: 12px;
+    color: #54585a;
+  }
+}
+
+.card {
+  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  grid-template-rows: 65px 1fr 45px;
+  background-color: white;
+  width: 240px;
+  height: 330px;
+  padding: 10px 0;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.35);
+  &__decoration {
+    grid-column: 1/2;
+    position: relative;
+    margin-top: 13px;
+    width: 5px;
+    height: 42px;
+    background-color: $dirtyBlue;
+  }
+  &__info--name {
+    margin-top: 10px;
+    margin-bottom: 4px;
+    grid-column: 2/3;
+    text-align: left;
+    font-family: $montserratFont;
+    font-size: 18px;
+    color: $deepGreen;
+  }
+  &__info--job {
+    margin-bottom: 10px;
+    grid-column: 2/3;
+    text-align: left;
+    font-family: $montserratFont;
+    font-size: 16px;
+    color: $metalColor;
+  }
+  &__img {
+    grid-column: 1/4;
+    object-fit: cover;
+    object-position: center center;
+    background-color: gainsboro;
+    width: 240px;
+    height: 200px;
+  }
+  &__social {
+    grid-column: 2/3;
+    display: flex;
+    list-style-type: none;
+    margin-top: 10px;
+    &--icon {
+      display: flex;
+      justify-content: center;
+      background-color: white;
+      width: 32px;
+      height: 32px;
+      border: solid 2px $hospitalGreen;
+      border-radius: 50%;
+      padding: 5px;
+      margin-right: 10px;
+      &:hover {
+        transform: scale(1.05);
+        transition: transform ease 0.2s;
+      }
+    }
+  }
+}
+
+.fa-mobile-alt,
+.fa-envelope,
+.fa-linkedin-in,
+.fa-github-alt {
+  font-size: 18px;
+  color: $deepGreen;
+}
+
+// Palettes
+.card__decoration__palette1 {
+  background-color: $dirtyBlue;
+}
+.card__decoration__palette2 {
+  background-color: $rustyRed;
+}
+.card__decoration__palette3 {
+  background-color: $eggYellow;
+}
+//Color para los bordes
+.social__icon__palette1 {
+  border-color: $hospitalGreen;
+}
+.social__icon__palette2 {
+  border-color: $tomatoRed;
+}
+.social__icon__palette3 {
+  border-color: $lightGreyBlue;
+}
+
+//Color para los iconos
+.icon_image__pallete1 {
+  color: $deepGreen;
+}
+.icon_image__pallete2 {
+  color: $rustyRed;
+}
+.icon_image__pallete3 {
+  color: $blackboard;
+}
+
+//color Nombre apellido
+.namePreview__pallete1 {
+  color: $deepGreen;
+}
+.namePreview__pallete2 {
+  color: $deepRed;
+}
+.namePreview__pallete3 {
+  color: $blackboard;
+}
