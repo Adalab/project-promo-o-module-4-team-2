@@ -1,5 +1,7 @@
+const expressServer = "http://localhost:4000/card";
+
 const dataApi = (data) => {
-  return fetch('https://awesome-profile-cards.herokuapp.com/card', {
+  return fetch(expressServer, {
     method: 'POST',
     body: JSON.stringify(data),
     headers: { 'Content-Type': 'application/json' },
