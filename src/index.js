@@ -3,13 +3,20 @@
 // Importamos los dos módulos de NPM necesarios para trabajar
 const express = require('express');
 const cors = require('cors');
+const card = require('./data/card.json');
 
 // Creamos el servidor
 const server = express();
 
 // Configuramos el servidor
 server.use(cors());
-server.use(express.json());
+server.use(
+  express.json({
+    limit: '5mb',
+  })
+);
+//Motor de plantillas
+server.set('view engine', 'ejs');
 
 // Arrancamos el servidor en el puerto 3000
 const serverPort = 4000;
@@ -38,6 +45,11 @@ server.post('/card', (req, res) => {
     res.json(responseError);
   }
 });
-server.get('/card/5646468786465', (req, res) => {
-  //Ruta para mostrar una tarjeta
+
+//URL params
+server.get('/card/:id', (req, res) => {
+  const requestParamsId = req.params.id;
+  const cardData = card.find((card) => card.id === requestParamsId);
+  res.render('card', cardData);
+  console, console.log(cardData);
 });
