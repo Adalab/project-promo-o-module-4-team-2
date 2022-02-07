@@ -9,20 +9,19 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/c11d9a6c57.js"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../main.css">
+    <script src="https://kit.fontawesome.com/c11d9a6c57.js" crossorigin="anonymous"></script>
 
 
 </head>
 
-<body>
-    <section class="card-preview className">
+<body class="main">
+    <section class="card-preview">
         <div class="container">
             <article class="card">
                 <div class="card__decoration card__decoration__palette1"></div>
                 <div class="card__info">
-                    <h3
-                        class="card__info--name js_previewName js_previeNameColor namePreview__pallete1">
+                    <h3 class="card__info--name js_previewName js_previeNameColor namePreview__pallete1">
                         <%=name%>
                     </h3>
                     <p class="card__info--job js_previewJob">
@@ -30,31 +29,21 @@
                     </p>
                 </div><img src="<%=photo%>" alt="User avatar" class="card__img">
                 <ul class="card__social ">
-                    <li
-                        class="card__social--icon social__icon__palette1 js_icon_border">
+                    <li class="card__social--icon social__icon__palette1 js_icon_border">
                         <a class="js_previewPhone" href="tel:+34630901052"><i
-                                class="fas fa-mobile-alt icon_image__pallete1"
+                                class="fas fa-mobile-alt icon_image__pallete1" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="card__social--icon social__icon__palette1 js_icon_border">
+                        <a class="js_previewPhone" href="mailto:1"><i class="far fa-envelope icon_image__pallete1"
                                 aria-hidden="true"></i></a>
                     </li>
-                    <li
-                        class="card__social--icon social__icon__palette1 js_icon_border">
-                        <a class="js_previewPhone" href="mailto:1"><i
-                                class="far fa-envelope icon_image__pallete1"
-                                aria-hidden="true"></i></a>
+                    <li class="card__social--icon social__icon__palette1 js_icon_border">
+                        <a class="js_previewPhone" href="https://www.linkedin.com/in/lauracarbajales"><i
+                                class="fab fa-linkedin-in icon_image__pallete1" aria-hidden="true"></i></a>
                     </li>
-                    <li
-                        class="card__social--icon social__icon__palette1 js_icon_border">
-                        <a class="js_previewPhone"
-                            href="https://www.linkedin.com/in/lauracarbajales"><i
-                                class="fab fa-linkedin-in icon_image__pallete1"
-                                aria-hidden="true"></i></a>
-                    </li>
-                    <li
-                        class="card__social--icon social__icon__palette1 js_icon_border">
-                        <a class="js_previewPhone"
-                            href="https://github.com/eargv"><i
-                                class="fab fa-github-alt icon_image__pallete1"
-                                aria-hidden="true"></i></a>
+                    <li class="card__social--icon social__icon__palette1 js_icon_border">
+                        <a class="js_previewPhone" href="https://github.com/eargv"><i
+                                class="fab fa-github-alt icon_image__pallete1" aria-hidden="true"></i></a>
                     </li>
                 </ul>
             </article>
