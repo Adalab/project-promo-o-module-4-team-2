@@ -1,5 +1,3 @@
-// Fichero src/index.js
-
 // Importamos los dos módulos de NPM necesarios para trabajar
 const express = require('express');
 const cors = require('cors');
@@ -31,7 +29,13 @@ server.post('/card', (req, res) => {
     error: 'Error description',
   };
 
-  if (req.body.name !== '' && req.body.job !== '') {
+  if (
+    req.body.name !== '' &&
+    req.body.job !== '' &&
+    req.body.email !== '' &&
+    req.body.linkedin !== '' &&
+    req.body.github !== ''
+  ) {
     savedCards.push(req.body);
     res.json(responseSuccess);
   } else {
@@ -41,3 +45,7 @@ server.post('/card', (req, res) => {
 server.get('/card/5646468786465', (req, res) => {
   //Ruta para mostrar una tarjeta
 });
+
+//Servidor de estaticos
+const staticServerPath = './src/public-react';
+server.use(express.static(staticServerPath));

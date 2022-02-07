@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "./static/css/main.6c1cb823.css",
+    "main.js": "./static/js/main.27db61d4.js",
+    "static/media/logo-awesome-profile-cards.svg": "./static/media/logo-awesome-profile-cards.6f544af3907bd2fabbc7165505ce9ab6.svg",
+    "static/media/marilogo.svg": "./static/media/marilogo.4295d7babf5429808ea8e00afb1ac24e.svg",
+    "index.html": "./index.html",
+    "main.6c1cb823.css.map": "./static/css/main.6c1cb823.css.map",
+    "main.27db61d4.js.map": "./static/js/main.27db61d4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6c1cb823.css",
+    "static/js/main.27db61d4.js"
+  ]
+}
