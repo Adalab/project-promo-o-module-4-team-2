@@ -1,5 +1,8 @@
 // Fichero src/index.js
 
+// importamos uuid
+const { v4: uuidv4 } = require('uuid');
+
 // Importamos los dos módulos de NPM necesarios para trabajar
 const express = require('express');
 const cors = require('cors');
@@ -35,9 +38,11 @@ const savedCards = [];
 
 // Escribimos los endpoints que queramos
 server.post('/card', (req, res) => {
+  const newCardData = { ...req.body, id: uuidv4() }
+  savedCards.push(newCardData);
   const responseSuccess = {
     success: true,
-    cardURL: 'https://awesome-profile-cards.heroku.app.com/card/{id}',
+    cardURL: `http://localhost:4000/card/${newCardData.id}`,
   };
 
   const responseError = {
@@ -46,7 +51,7 @@ server.post('/card', (req, res) => {
   };
 
   if (req.body.name !== '' && req.body.job !== '') {
-    savedCards.push(req.body);
+
     res.json(responseSuccess);
   } else {
     res.json(responseError);
