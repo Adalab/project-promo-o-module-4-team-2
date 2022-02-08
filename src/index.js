@@ -60,7 +60,7 @@ server.post('/card', (req, res) => {
   );
   const responseSuccess = {
     success: true,
-    cardURL: `http://localhost:4000/card/${newCardData.id}`,
+    cardURL: `http://awesome-profile-cards-team-2.herokuapp.com/card/${newCardData.id}`,
   };
 
   const responseError = {

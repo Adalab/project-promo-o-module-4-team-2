@@ -1,4 +1,4 @@
-const expressServer = "http://localhost:4000/card";
+const expressServer = 'https://awesome-profile-cards-team-2.herokuapp.com/card';
 
 const dataApi = (data) => {
   return fetch(expressServer, {
