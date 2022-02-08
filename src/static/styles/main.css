@@ -14,7 +14,7 @@ a {
 
 .main {
   height: 100vh;
-  background-image: linear-gradient(to bottom, #BFCDD0, #DDE9ED);
+  background-image: linear-gradient(to bottom, #e6ddfc, #f4e3f7);
   display: flex;
   justify-content: center;
   align-items: center;
