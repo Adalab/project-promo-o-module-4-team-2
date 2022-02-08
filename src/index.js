@@ -90,7 +90,7 @@ server.get('/card/:id', (req, res) => {
   // console.log(cardData);
   const queryStmt = db.prepare('SELECT * FROM cards WHERE uuid = ?');
   const userCard = queryStmt.get(req.params.id);
-  res.render('pages/card', userCard);
+  res.render('card', userCard);
 });
 
 //Servidor de estaticos
