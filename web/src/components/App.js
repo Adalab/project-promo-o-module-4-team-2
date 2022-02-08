@@ -20,7 +20,7 @@ function App() {
       phone: '',
       linkedin: '',
       github: '',
-      photo: 'https://www.anipedia.net/imagenes/perros-800x375.jpg',
+      photo: 'https://i.pinimg.com/originals/dc/f8/79/dcf8790a2b15a134cfa2b4d7bf780828.jpg',
     })
   );
 
@@ -48,7 +48,7 @@ function App() {
       phone: '',
       linkedin: '',
       github: '',
-      photo: 'https://www.anipedia.net/imagenes/perros-800x375.jpg',
+      photo: 'https://i.pinimg.com/originals/dc/f8/79/dcf8790a2b15a134cfa2b4d7bf780828.jpg',
     });
   };
 

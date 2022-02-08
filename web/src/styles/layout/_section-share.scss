@@ -13,6 +13,9 @@
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 30px;
+  &:hover {
+    color: #cd81ff;
+  }
 
   &--icon {
     display: flex;
@@ -43,7 +46,7 @@
 
 .fa-share-alt {
   font-size: 22.4px;
-  color: $dullOrange;
+  color: #cd81ff;
 }
 
 .container__button {
@@ -79,7 +82,7 @@
       border-radius: 12px;
       border: none;
       box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
-      background-color: $dullOrange;
+      background-color: #de92ed;
     }
   }
 
@@ -102,8 +105,11 @@
   }
   &--link {
     margin: 5px auto 13px auto;
-    color: $dullOrange;
+    color: #de92ed;
     text-align: center;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   &--hidden {
     display: none;
