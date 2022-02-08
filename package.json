@@ -7,25 +7,24 @@
     "publish-react": "cd web && npm run build && cd .. && rm -rf ./src/public-react && mv ./web/build ./src/public-react",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
-    "publish-react": "cd web && npm run build && cd .. && rm -rf ./src/public-react && mv ./web/build ./src/public-react"
+    "dev": "nodemon src/index.js"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Adalab/project-promo-o-module-4-team-2.git"
   },
-  
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Adalab/project-promo-o-module-4-team-2/issues"
   },
-
   "homepage": "https://github.com/Adalab/project-promo-o-module-4-team-2#readme",
   "dependencies": {
+    "better-sqlite3": "^7.5.0",
     "cors": "^2.8.5",
     "ejs": "^3.1.6",
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15",
+    "uuid": "^8.3.2"
   }
 }

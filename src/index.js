@@ -1,7 +1,19 @@
+// Fichero src/index.js
+
+// importamos uuid
+const { v4: uuidv4 } = require('uuid');
+
 // Importamos los dos módulos de NPM necesarios para trabajar
 const express = require('express');
 const cors = require('cors');
 const card = require('./data/card.json');
+
+const Database = require('better-sqlite3');
+const db = new Database('./src/data/database.db', {
+  // con verbose le decimos que muestre en la consola todas las queries que se ejecuten
+  verbose: console.log,
+  // así podemos comprobar qué queries estamos haciendo en todo momento
+});
 
 // Creamos el servidor
 const server = express();
@@ -13,11 +25,16 @@ server.use(
     limit: '5mb',
   })
 );
+
+//Configuramos sevidor static css
+const staticServerCss = './src/static/styles';
+server.use(express.static(staticServerCss));
+
 //Motor de plantillas
 server.set('view engine', 'ejs');
 
 // Arrancamos el servidor en el puerto 3000
-const serverPort = process.env.PORT ? process.env.PORT : 4000;
+const serverPort = 4000; /*process.env.PORT ? process.env.PORT :*/
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
@@ -26,9 +43,24 @@ const savedCards = [];
 
 // Escribimos los endpoints que queramos
 server.post('/card', (req, res) => {
+  const newCardData = { ...req.body, id: uuidv4() };
+  const insertStmt = db.prepare(
+    'INSERT INTO cards (uuid, palette, name, job, phone, email, github, linkedin, photo) VALUES (?,?,?,?,?,?,?,?,?)'
+  );
+  insertStmt.run(
+    newCardData.id,
+    newCardData.palette,
+    newCardData.name,
+    newCardData.job,
+    newCardData.phone,
+    newCardData.email,
+    newCardData.github,
+    newCardData.linkedin,
+    newCardData.photo
+  );
   const responseSuccess = {
     success: true,
-    cardURL: 'https://awesome-profile-cards.heroku.app.com/card/{id}',
+    cardURL: `http://localhost:4000/card/${newCardData.id}`,
   };
 
   const responseError = {
@@ -52,10 +84,13 @@ server.post('/card', (req, res) => {
 
 //URL params
 server.get('/card/:id', (req, res) => {
-  const requestParamsId = req.params.id;
-  const cardData = card.find((card) => card.id === requestParamsId);
-  res.render('card', cardData);
-  console, console.log(cardData);
+  // const requestParamsId = req.params.id;
+  // const cardData = card.find((card) => card.id === requestParamsId);
+  // res.render('card', cardData);
+  // console.log(cardData);
+  const queryStmt = db.prepare('SELECT * FROM cards WHERE uuid = ?');
+  const userCard = queryStmt.get(req.params.id);
+  res.render('pages/card', userCard);
 });
 
 //Servidor de estaticos

@@ -1,5 +1,5 @@
 import '../styles/App.scss';
-import logo from '../images/logo-awesome-profile-cards.svg';
+import logo from '../images/logo_header.png';
 import { useState, useEffect } from 'react';
 import dataApi from '../services/api.js';
 import Header from './Header';
@@ -109,12 +109,12 @@ function App() {
 
   return (
     <div>
-      <Header img={logo} />
       <Switch>
         <Route path='/' exact>
           <Landing />
         </Route>
         <Route path='/card'>
+          <Header img={logo} />
           <main className='card__main'>
             <CardPreview
               palette={data.palette}
