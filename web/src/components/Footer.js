@@ -1,6 +1,6 @@
 import '../styles/components/Footer.scss';
 import '../styles/core/Variables.scss';
-import logoFooter from '../images/marilogo.svg';
+import logoFooter from '../images/logo_footer.png';
 
 const Footer = (props) => {
   return (

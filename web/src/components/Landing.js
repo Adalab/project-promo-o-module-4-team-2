@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import LogoLanding from '../images/logo-awesome-profile-cards.svg';
+import LogoLanding from '../images/logo_landing.png';
 
 const Landing = () => {
   return (

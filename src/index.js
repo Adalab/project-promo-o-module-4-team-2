@@ -20,16 +20,14 @@ server.use(
 );
 
 //Configuramos sevidor static css
-const staticServerCss = "./src/static/styles";
+const staticServerCss = './src/static/styles';
 server.use(express.static(staticServerCss));
-
-
 
 //Motor de plantillas
 server.set('view engine', 'ejs');
 
 // Arrancamos el servidor en el puerto 3000
-const serverPort = 4000;/*process.env.PORT ? process.env.PORT :*/
+const serverPort = 4000; /*process.env.PORT ? process.env.PORT :*/
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
@@ -38,7 +36,7 @@ const savedCards = [];
 
 // Escribimos los endpoints que queramos
 server.post('/card', (req, res) => {
-  const newCardData = { ...req.body, id: uuidv4() }
+  const newCardData = { ...req.body, id: uuidv4() };
   savedCards.push(newCardData);
   const responseSuccess = {
     success: true,
@@ -51,7 +49,6 @@ server.post('/card', (req, res) => {
   };
 
   if (req.body.name !== '' && req.body.job !== '') {
-
     res.json(responseSuccess);
   } else {
     res.json(responseError);
