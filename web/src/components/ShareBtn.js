@@ -24,7 +24,7 @@ const ShareBtn = (props) => {
       <div className={`container__created${cardCreated ? '' : '--hidden'}`}>
         <h4 className='container__created--title'>La tarjeta ha sido creada:</h4>
         <a href={props.apiData.cardURL} className='container__created--link'>
-          {props.apiData.cardURL}
+          Pincha aquí para ver tu tarjeta
         </a>
         <a
           type='submit'
