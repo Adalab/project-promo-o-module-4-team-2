@@ -34,7 +34,7 @@ server.use(express.static(staticServerCss));
 server.set('view engine', 'ejs');
 
 // Arrancamos el servidor en el puerto 3000
-const serverPort = 4000; /*process.env.PORT ? process.env.PORT :*/
+const serverPort = process.env.PORT ? process.env.PORT : 4000;
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
@@ -60,7 +60,7 @@ server.post('/card', (req, res) => {
   );
   const responseSuccess = {
     success: true,
-    cardURL: `http://awesome-profile-cards-team-2.herokuapp.com/card/${newCardData.id}`,
+    cardURL: `https://awesome-profile-cards-team-2.herokuapp.com/card/${newCardData.id}`,
   };
 
   const responseError = {

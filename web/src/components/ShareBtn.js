@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 const ShareBtn = (props) => {
+  console.log(props)
   const handleCreateCard = (ev) => {
     props.handleClickBtnCreateCard(ev);
     setCardCreated(true);
