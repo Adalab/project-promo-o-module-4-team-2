@@ -8,14 +8,3 @@ const dataApi = (data) => {
   }).then((response) => response.json());
 };
 export default dataApi;
-
-//App.js
-// import Api from './...';
-
-// const handleClickBtn = (ev) => {
-//   ev.preventDefault();
-//   setData(Api());
-//   if (data !== '') {
-//     <p>'esta es tu url'</p>;
-//   }
-// };

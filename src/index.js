@@ -44,30 +44,7 @@ const savedCards = [];
 // Escribimos los endpoints que queramos
 server.post('/card', (req, res) => {
   const newCardData = { ...req.body, id: uuidv4() };
-  const insertStmt = db.prepare(
-    'INSERT INTO cards (uuid, palette, name, job, phone, email, github, linkedin, photo) VALUES (?,?,?,?,?,?,?,?,?)'
-  );
-  insertStmt.run(
-    newCardData.id,
-    newCardData.palette,
-    newCardData.name,
-    newCardData.job,
-    newCardData.phone,
-    newCardData.email,
-    newCardData.github,
-    newCardData.linkedin,
-    newCardData.photo
-  );
-  const responseSuccess = {
-    success: true,
-    cardURL: `https://awesome-profile-cards-team-2.herokuapp.com/card/${newCardData.id}`,
-  };
-
-  const responseError = {
-    success: false,
-    error: 'Error description',
-  };
-
+  console.log(newCardData);
   if (
     req.body.name !== '' &&
     req.body.job !== '' &&
@@ -75,19 +52,37 @@ server.post('/card', (req, res) => {
     req.body.linkedin !== '' &&
     req.body.github !== ''
   ) {
-    savedCards.push(req.body);
+    const insertStmt = db.prepare(
+      'INSERT INTO cards (uuid, palette, name, job, phone, email, github, linkedin, photo) VALUES (?,?,?,?,?,?,?,?,?)'
+    );
+    insertStmt.run(
+      newCardData.id,
+      newCardData.palette,
+      newCardData.name,
+      newCardData.job,
+      newCardData.phone,
+      newCardData.email,
+      newCardData.github,
+      newCardData.linkedin,
+      newCardData.photo
+    );
+    const responseSuccess = {
+      success: true,
+      cardURL: `https://awesome-profile-cards-team-2.herokuapp.com/card/${newCardData.id}`,
+    };
+
     res.json(responseSuccess);
   } else {
+    const responseError = {
+      success: false,
+      error: 'Error description',
+    };
     res.json(responseError);
   }
 });
 
 //URL params
 server.get('/card/:id', (req, res) => {
-  // const requestParamsId = req.params.id;
-  // const cardData = card.find((card) => card.id === requestParamsId);
-  // res.render('card', cardData);
-  // console.log(cardData);
   const queryStmt = db.prepare('SELECT * FROM cards WHERE uuid = ?');
   const userCard = queryStmt.get(req.params.id);
   res.render('card', userCard);

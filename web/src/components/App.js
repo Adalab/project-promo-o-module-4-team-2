@@ -60,7 +60,6 @@ function App() {
   const handleClickBtnCreateCard = (ev) => {
     ev.preventDefault();
     dataApi(data).then((data) => {
-      console.log(data);
       setApiData(data);
     });
   };

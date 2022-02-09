@@ -21,7 +21,6 @@ a {
 }
 
 .card-preview {
-  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,7 +49,7 @@ a {
 @media (min-width: 768px) {
   .container {
     margin: 0 30px 40px 30px;
- }
+  }
 }
 
 .card {
@@ -76,18 +75,18 @@ a {
   margin-bottom: 4px;
   grid-column: 1/2;
   text-align: left;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
-  color: #114E4E;
+  color: #114e4e;
 }
 .card__info--job {
   margin-top: 0px;
   margin-bottom: 10px;
   grid-column: 2/3;
   text-align: left;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  color: #54585A;
+  color: #54585a;
 }
 .card__img {
   grid-column: 0.25;
@@ -98,7 +97,7 @@ a {
   height: 200px;
 }
 .card__social {
-  grid-column:2/3;
+  grid-column: 2/3;
   grid-row: 3/4;
   display: flex;
   list-style-type: none;
@@ -110,7 +109,7 @@ a {
   background-color: white;
   width: 32px;
   height: 32px;
-  border: solid 2px #A2DEAF;
+  border: solid 2px #a2deaf;
   border-radius: 50%;
   padding: 5px;
   margin-right: 10px;
@@ -119,43 +118,65 @@ a {
   transform: scale(1.05);
   transition: transform ease 0.2s;
 }
-.fa-mobile-alt, .fa-envelope, .fa-linkedin-in, .fa-github-alt {
+.fa-mobile-alt,
+.fa-envelope,
+.fa-linkedin-in,
+.fa-github-alt {
   font-size: 18px;
-  color: #114E4E;
+  color: #114e4e;
 }
+/* Palettes */
 .card__decoration__palette1 {
   background-color: #438792;
 }
 .card__decoration__palette2 {
-  background-color: #BD1010;
+  background-color: #bd1010;
 }
 .card__decoration__palette3 {
-  background-color: #EAB052;
+  background-color: #eab052;
 }
+.card__decoration__palette4 {
+  background-color: #de92ed;
+}
+
+/* Color para los bordes */
 .social__icon__palette1 {
-  border-color: #A2DEAF;
+  border-color: #a2deaf;
 }
 .social__icon__palette2 {
-  border-color: #E95626;
+  border-color: #e95626;
 }
 .social__icon__palette3 {
-  border-color: #A0C0CF;
+  border-color: #a0c0cf;
 }
+.social__icon__palette4 {
+  border-color: #fc63ea;
+}
+
+/* Color para los iconos */
 .icon_image__pallete1 {
-  color: #114E4E;
+  color: #114e4e;
 }
 .icon_image__pallete2 {
-  color: #BD1010;
+  color: #bd1010;
 }
 .icon_image__pallete3 {
-  color: #3E5B65;
+  color: #3e5b65;
 }
+.icon_image__pallete4 {
+  color: rgb(85, 85, 85);
+}
+
+/* color Nombre apellido */
 .namePreview__pallete1 {
-  color: #114E4E;
+  color: #114e4e;
 }
 .namePreview__pallete2 {
   color: #420101;
 }
 .namePreview__pallete3 {
-  color: #3E5B65;
+  color: #3e5b65;
+}
+.namePreview__pallete4 {
+  color: rgb(85, 85, 85);
 }
