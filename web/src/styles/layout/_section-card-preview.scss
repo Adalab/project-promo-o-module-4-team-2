@@ -128,6 +128,9 @@
 .card__decoration__palette3 {
   background-color: $eggYellow;
 }
+.card__decoration__palette4 {
+  background-color: #de92ed;
+}
 //Color para los bordes
 .social__icon__palette1 {
   border-color: $hospitalGreen;
@@ -137,6 +140,9 @@
 }
 .social__icon__palette3 {
   border-color: $lightGreyBlue;
+}
+.social__icon__palette4 {
+  border-color: #fc63ea;
 }
 
 //Color para los iconos
@@ -149,6 +155,9 @@
 .icon_image__pallete3 {
   color: $blackboard;
 }
+.icon_image__pallete4 {
+  color: rgb(85, 85, 85);
+}
 
 //color Nombre apellido
 .namePreview__pallete1 {
@@ -159,4 +168,7 @@
 }
 .namePreview__pallete3 {
   color: $blackboard;
+}
+.namePreview__pallete3 {
+  color: rgb(85, 85, 85);
 }

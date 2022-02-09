@@ -50,6 +50,12 @@ const Form = (props) => {
             />
             <Palettes number='2' color='hot' data={props.palette} handleInput={props.handleInput} />
             <Palettes number='3' color='mix' data={props.palette} handleInput={props.handleInput} />
+            <Palettes
+              number='4'
+              color='paquita'
+              data={props.palette}
+              handleInput={props.handleInput}
+            />
           </div>
         </div>
       </fieldset>
