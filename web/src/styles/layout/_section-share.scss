@@ -105,6 +105,7 @@
   }
   &--link {
     margin: 5px auto 13px auto;
+    font-family: $opensansFont;
     color: #de92ed;
     text-align: center;
     &:hover {
@@ -138,18 +139,18 @@
 
 .container__design:hover .container__design--iconArrow,
 .container__design:hover .container__design--title {
-  color: $dullOrange;
+  color: #de92ed;
   transition: color ease 0.2s;
 }
 
 .container__fill:hover .container__fill--iconArrow,
 .container__fill:hover .container__fill--title {
-  color: $dullOrange;
+  color: #de92ed;
   transition: color ease 0.2s;
 }
 
 .container__share:hover .container__share--iconArrow,
 .container__share:hover .container__share--title {
-  color: $dullOrange;
+  color: #de92ed;
   transition: color ease 0.2s;
 }
