@@ -1,4 +1,4 @@
-const expressServer = 'https://awesome-profile-cards-team-2.herokuapp.com/card';
+const expressServer = '//awesome-profile-cards-team-2.herokuapp.com/card';
 
 const dataApi = (data) => {
   return fetch(expressServer, {
