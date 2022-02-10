@@ -1,4 +1,6 @@
-<h1>Rock, Paper or Scissors</h1>
+![Logo PS Management Profile Cards](https://awesome-profile-cards-team-2.herokuapp.com/static/media/logo_landing.ed4aca9b3e4d989ac8b2.png)
+
+<h1>PS Management Profile Cards</h1>
 
 <details>
   <summary>Table of Contents</summary>
