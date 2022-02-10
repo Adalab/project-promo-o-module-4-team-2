@@ -68,7 +68,7 @@ server.post('/card', (req, res) => {
     );
     const responseSuccess = {
       success: true,
-      cardURL: `https://awesome-profile-cards-team-2.herokuapp.com/card/${newCardData.id}`,
+      cardURL: `//awesome-profile-cards-team-2.herokuapp.com/card/${newCardData.id}`,
     };
 
     res.json(responseSuccess);
